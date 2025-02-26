@@ -1,0 +1,11 @@
+# User inputs a number to check if even or odd
+user_input = int(input("what is the number you want to check?\n"))
+
+# User input modulo 2 variable
+num_check = (user_input%2)
+
+# Even or odd check
+if num_check == 0:
+    print("This number is even")
+else:
+    print("This number is odd")

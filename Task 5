@@ -1,0 +1,90 @@
+# Python Pizza
+
+# Greeting messages
+print("Welcome to Python Pizza Deliveries!")
+
+# User orders size of pizza
+size = input("What size pizza do you want? S, M or L: ")
+
+# User pepperoni order
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
+
+# User extra cheese order
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+total = 0
+
+# Size total if statement
+if size == "S":
+    total += 15
+    print("You ordered a small pizza")
+elif size == "M":
+    total += 20
+    print("You ordered a medium pizza")
+elif size == "L":
+    total += 25
+    print("You ordered a large pizza")
+
+# Pepperoni total if statement
+if pepperoni == "Y":
+    if size =="S":
+        total += 2
+    else:
+        total += 3
+elif pepperoni == "N":
+    print("Hold the peps")
+
+# Extra cheese if statement
+if extra_cheese == "Y":
+    total += 1
+    print("Load her up with cheese!")
+elif extra_cheese == "N":
+    print("Extra cheese will make you quese. Hold that cheddar.")
+
+print(f"Your total is ${total}")
+
+
+
+# Python Pizza Cleaner Version
+
+# Greeting message
+print("Welcome to Python Pizza Deliveries!")
+
+# User orders
+size = input("What size pizza do you want? S, M, or L: ").upper()
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ").upper()
+extra_cheese = input("Do you want extra cheese? Y or N: ").upper()
+
+# Initialize total
+total = 0
+
+# Calculate pizza size cost
+if size == "S":
+    total += 15
+    print("You ordered a small pizza.")
+elif size == "M":
+    total += 20
+    print("You ordered a medium pizza.")
+elif size == "L":
+    total += 25
+    print("You ordered a large pizza.")
+else:
+    print("Invalid size selected.")
+
+# Add cost for pepperoni
+if pepperoni == "Y":
+    total += 2 if size == "S" else 3
+elif pepperoni == "N":
+    print("Hold the pepperoni.")
+
+# Add cost for extra cheese
+if extra_cheese == "Y":
+    total += 1
+    print("Extra cheese added!")
+elif extra_cheese == "N":
+    print("No extra cheese.")
+
+# Display the total
+print(f"Your total is ${total}.")
+
+
+

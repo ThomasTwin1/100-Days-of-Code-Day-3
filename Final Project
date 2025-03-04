@@ -1,0 +1,55 @@
+print(r'''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\ ` . "-._ /_______________|_______
+|                   | |o ;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+
+# Welcome Message
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure and escape the island.")
+print("You wash ashore from a shipwrecked raft and see a sign that says 'Only the strong will leave this island'")
+# User chooses to go left or right side of island
+user_input_island = input("Do you want to go to the left side or right side of the island?Type Left or Right.").lower()
+# Right side choice
+if user_input_island == "right":
+    print ("You fell in a whole full of cobras and died. Game Over")
+# Left side choice
+elif user_input_island == "left":
+    print("You tripped over a branch and discovered a treasure.")
+# User takes treasure
+    user_input_treasure = input("Do you want to take the treasure?Type Yes or No.").lower()
+    if user_input_treasure == "yes":
+        print("A pirate jumped out of bushes and chopped off your hand then stabbed you in the chest. Game over")
+# User does not take treasure
+    elif user_input_treasure == "no":
+        user_input_coin = input("A pirate came by and took their treasure. They want to give you a gold coin. Do you want to take it?Type Yes or No.").lower()
+# User takes gold coin
+        if user_input_coin == "yes":
+            print("The gold coin is extremely hot and melts your hand. Game over")
+# User does not take the coin
+        elif user_input_coin == "no":
+            user_input_pill = input("The pirate leaves in peace and leaves behind a glowing pill. Do you want to take the pill?").lower()
+# User takes pill
+            if user_input_pill == "yes":
+                print("The pill gives you super strength and the ability to fly. You successfully escaped the island. You win!")
+# User does not take pill
+            elif user_input_pill == "no":
+                print("The glowing pill erupts and spews out lava over the island. Your face melts off. Game over")
+
